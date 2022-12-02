@@ -1,0 +1,8 @@
+---
+- hosts: apache
+  become: true
+  roles:
+    - deploiement
+    
+  
+            

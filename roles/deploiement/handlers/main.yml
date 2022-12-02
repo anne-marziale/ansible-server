@@ -1,0 +1,5 @@
+---
+# handlers file for deploiement
+- name: restartApache
+  service: name=apache2 state=restarted
+

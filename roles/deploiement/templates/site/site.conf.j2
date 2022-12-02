@@ -1,0 +1,9 @@
+<VirtualHost *:{{ apache_port }}>
+
+  ServerName {{ servername }}
+  DocumentRoot {{ document_root }}
+
+  ErrorLog ${APACHE_LOG_DIR}/server2.imingo.net.error.log
+  CustomLog ${APACHE_LOG_DIR}/server2.imingo.net.access.log combined
+
+</VirtualHost>  

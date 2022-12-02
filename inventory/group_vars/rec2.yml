@@ -1,0 +1,4 @@
+servername: rec2.sncf.fr
+env_name: rec2
+apache_port: 8082
+

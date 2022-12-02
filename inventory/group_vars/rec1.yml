@@ -1,0 +1,3 @@
+servername: rec1.sncf.fr
+env_name: rec1
+apache_port: 8081

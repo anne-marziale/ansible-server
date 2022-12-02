@@ -1,0 +1,55 @@
+---
+# tasks file for deploy
+- name: Create a directory if it does not exist
+  ansible.builtin.file:
+    path: '{{ document_root }}'
+    state: directory
+    mode: '0755'
+  loop: 
+   - apache
+
+- name: Depot d'un template index
+  ansible.builtin.template:
+    src: "{{ index_path }}"
+    dest: "{{ document_root }}"
+    owner: root
+    group: root
+    mode: '0644'
+
+- name: Installation apache
+  apt: 
+    name=apache2 
+    state=latest
+
+- name: Modification ports.conf
+  ansible.builtin.template:
+    src: "templates/conf/ports.conf.j2"
+    dest: "{{ apache2 }}/ports.conf"
+    owner: root
+    group: root
+ 
+- name: Modification apache2.conf
+  ansible.builtin.template:
+    src: "templates/conf/apache2.conf.j2"
+    dest: "{{ apache2 }}/apache2.conf"
+    owner: root
+    group: root
+
+- name: Modification site.conf.j2
+  ansible.builtin.template:
+    src: "templates/site/site.conf.j2"
+    dest: "{{ apache2 }}/sites-available/site.conf"
+    owner: root
+    group: root
+
+- name: Creation lien symbolique
+  ansible.builtin.file:
+    # remote_src: yes
+    src: "{{ apache2 }}/sites-available/site.conf"
+    dest: "{{ apache2 }}/sites-enabled/site.conf"
+    owner: root
+    state: link
+    group: root
+  notify: restartApache 
+
+

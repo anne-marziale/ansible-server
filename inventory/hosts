@@ -1,0 +1,14 @@
+mail.example.com
+
+[apache]
+
+[rec1]
+server1 
+
+[rec2]
+server2
+
+[apache:children]
+rec1
+rec2
+
