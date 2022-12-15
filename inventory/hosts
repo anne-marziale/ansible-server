@@ -3,7 +3,7 @@ mail.example.com
 [apache]
 
 [rec1]
-server1
+server3
 
 [rec2]
 server2

@@ -1,0 +1,4 @@
+ansible_host: 192.168.142.133
+ansible_user: anne
+ansible_password: tp
+become_password: tp
