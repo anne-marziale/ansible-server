@@ -1,4 +1,4 @@
 ---
 # vars file for deploiement
 index_path: "templates/www/index.html"
-
+ansible_become_pass: "{{ become_password }}"

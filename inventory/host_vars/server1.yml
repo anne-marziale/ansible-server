@@ -1,3 +1,4 @@
 ansible_host: 192.168.142.130 
 ansible_user: nini 
 ansible_password: nini
+become_password: nini
