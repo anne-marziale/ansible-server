@@ -39,6 +39,8 @@ Ici, nous allons utiliser 2 machines virtuelles. Une machine control node qui h�
 -   Automatisation avec Ansible
     -   **Outils** : _git_, apache,_ansible_.
     -   **Ce qu'il faut faire** : Il faut à présent développer un playbook ansible qui permet d'automatiser la création d'une page html dans différents environnements sur un serveur apache.
+
+    Lancement playbook Ansible : ansible-playbook playbooks/playbook.yml
   
 -   Installation Jenkins sur VMware avec Ubuntu 22.04:
 
@@ -56,6 +58,7 @@ Ici, nous allons utiliser 2 machines virtuelles. Une machine control node qui h�
     - sudo ufw enable
         
         
-       - Installation des différents plugins suggérés + installation plugin ansible.
+- Installation des différents plugins suggérés + installation plugin ansible.
+- Configuration outil Ansible.
        
 - Réalisation Pipeline : Jenkins_Pipeline sur JenkinsFile.
