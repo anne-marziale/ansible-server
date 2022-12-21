@@ -36,13 +36,13 @@ Ici, nous allons utiliser 2 machines virtuelles. Une machine control node qui h√
 -   Installation manuelle du produit + r√©daction de la documentation
     -   **Outils** : _git_, ansible, jenkins,_linux_, _bash_, _apache_, _html_, etc ..
 
--   Installation OpenSSH pour permettre le remote server sur VSCode.
+-   ###Installation OpenSSH pour permettre le remote server sur VSCode.###
 
    - sudo apt update && sudo apt upgrade
    - sudo apt install openssh-server
    - sudo systemctl enable --now ssh
    - sudo systemctl status ssh
-   
+
    - ssh anne@192.168.142.133
 
 -   Automatisation avec Ansible
