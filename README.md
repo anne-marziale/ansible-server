@@ -14,9 +14,10 @@ Une machine control node qui héberge Ansible et Jenkins et une machine managed 
 
 ## Coté Ansible ##
 
-Dans un premier temps dans **le rôle Déploiement** sous forme de différentes tasks, nous allons réaliser le dépôt d'un fichier template HTML sur différents environnements sur le serveur Apache, ce rôle éxécutera par la suite les tâches grâce playbook.yml. 
+Dans un premier temps dans **le rôle Déploiement** sous forme de différentes tasks, nous allons réaliser le dépôt d'un fichier template HTML sur différents environnements recttes sur un serveur Apache.
+Les tasks de ce rôle s'éxécute grâce au lancement du playbook.yml. 
 
-J'ai également modifier la configuration des différents fichiers de configurations d'apache tel que apache.conf (situé dans templates) par exemple, afin de mettre le fichier html direcetement sur le serveur apache. 
+J'ai également modifier la configuration des différents fichiers de configurations d'apache tel que apache.conf (situé dans templates) par exemple, afin de déposer le fichier html direcetement sur le serveur apache. 
 
 Le playbook Ansible s'éxecute grâce à la commande **"ansible-playbook playbooks/playbook.yml"**.
 
