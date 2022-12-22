@@ -3,7 +3,7 @@
 Déploiement d'Ansible sous forme de Pipeline avec Jenkins.
 Ici, nous avons une application simple c'est à dire une page html qui sera héberger sur un serveur Apache.
 
-L'objectif de cette application est d'herberger une page HTML sur différents environnements (Recette 1, Recette 2, etc ...). , grâce à la configuration d'un serveur apache avec Ansible.
+L'objectif de cette application est d'herberger une page HTML sur différents environnements (Recette 1, Recette 2, etc ...). , grâce à la configuration d'un serveur apache en automatisant avec Ansible.
 
 ![Capture d’écran 2022-12-21 222645](https://user-images.githubusercontent.com/85136214/209154722-dda763f9-4b87-4d49-ad25-b4d29c70ba05.png)
 
