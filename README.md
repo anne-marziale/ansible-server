@@ -86,6 +86,10 @@ L'objectif va être de déployer via une Pipeline Jenkins le playbook ansible gr
 
 - Installation des différents plugins suggérés + installation plugin ansible.
 - Configuration outil Ansible.
+- Mise en place Build Trigger pour que le Build se lance après chaque commit du repository.
+
+![Capture d’écran 2022-12-21 235628](https://user-images.githubusercontent.com/85136214/209156249-65eeba2d-9dff-41c5-a6fc-c9fd9e20c6cd.png)
+
 
 - Création JenkinsFile
 
