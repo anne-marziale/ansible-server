@@ -3,8 +3,21 @@
 Déploiement d'une application sous forme de Pipeline avec Jenkins.
 Ici, application simple avec une page html sur un serveur Apache.
 
+L'objectif de cette application est de faire une configuration serveur apache avec Ansible sur différents environnements (Recette 1, Recette 2, etc ...). 
+
 # Contexte
 Ici, nous allons utiliser 2 machines virtuelles. Une machine control node qui hébergera ansible et Jenkins et une machine managed node.
+
+## Coté Ansible ##
+
+Dans un premier temps dépôt d'un fichier HTML simple sur le serveur apache grâce au rôle Déploiement. 
+
+Dans les différentes tâches du rôle déploiement nous pouvons voir la création et le dépot d'un fichier sur les différents environnements. 
+Par la suite j'ai également modifier la configuration de différents fichiers tel que apache.conf (situé dans templates) afin de mettre le fichier html direcetement sur le serveur apache. Le playbook s'éxecute grâce à la commande **"ansible-playbook playbooks/playbook.yml"**.
+
+## Coté Jenkins ##
+
+L'objectif va être de déployer via une Pipeline Jenkins le playbook ansible grâce au jenkinsfile.
 
 
 # Outils utilisés
