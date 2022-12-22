@@ -9,13 +9,12 @@ L'objectif de cette application est d'herberger une page HTML sur différents en
 
 
 # Contexte
-Ici, nous allons utiliser 2 machines virtuelles. Une machine control node qui hébergera Ansible et Jenkins et une machine managed node sur laquelle les tâches ansible seront exécuter.
+Ici, nous avons utiliser 2 machines virtuelles. 
+Une machine control node qui héberge Ansible et Jenkins et une machine managed node sur laquelle les tâches ansible seront exécuter.
 
 ## Coté Ansible ##
 
-Dans un premier temps nous allons réaliser le dépôt d'un fichier template HTML dans la configuration d'apache grâce au rôle Déploiement qui éxécutera les tâches du rôle sur le playbook.yml. 
-
-Dans les différentes tâches du rôle nous pouvons voir la création et le dépot d'un fichier sur les différents environnements. 
+Dans un premier temps dans **le rôle Déploiement** sous forme de différentes tasks, nous allons réaliser le dépôt d'un fichier template HTML sur différents environnements sur le serveur Apache, ce rôle éxécutera par la suite les tâches grâce playbook.yml. 
 
 J'ai également modifier la configuration des différents fichiers de configurations d'apache tel que apache.conf (situé dans templates) par exemple, afin de mettre le fichier html direcetement sur le serveur apache. 
 
@@ -87,8 +86,8 @@ L'objectif va être de déployer via une Pipeline Jenkins le playbook ansible gr
 ### JENKINS ###
 
 - Installation des différents plugins suggérés + installation plugin ansible.
-- Configuration outil Ansible.
-- Mise en place Build Trigger pour que le Build se lance après chaque commit du repository.
+- Configuration **outil Ansible** dans **Administrer Jenkins** puis **Gestion Globale des outils**.
+- Mise en place **Build Trigger** pour que le Build se lance après chaque commit du repository.
 
 ![Capture d’écran 2022-12-21 235628](https://user-images.githubusercontent.com/85136214/209156249-65eeba2d-9dff-41c5-a6fc-c9fd9e20c6cd.png)
 
@@ -98,6 +97,6 @@ L'objectif va être de déployer via une Pipeline Jenkins le playbook ansible gr
 ![Capture d’écran 2022-12-21 234815](https://user-images.githubusercontent.com/85136214/209155679-387c1232-29f6-4758-b4c7-d79fc7c6e246.png)
 
        
-- Réalisation Pipeline : Jenkins_Pipeline.
+- Réalisation Pipeline réussie : Jenkins_Pipeline.
 
 ![Capture d’écran 2022-12-22 001124](https://user-images.githubusercontent.com/85136214/209155728-9c6a3f34-be14-496f-999e-d5e0e14ff631.png)
