@@ -36,10 +36,12 @@ L'objectif va être de déployer via une Pipeline Jenkins le playbook ansible gr
 
 ## Objectif
 
+Grâce à une pipeline Jenkins je vais :
+
  - Installer Ansible
  - Réaliser un git Clone.
  - Déployer playbook ansible 
- - Lancer un build automatiquement après chaque commit, tout ça grâce à une pipeline Jenkins.
+ - Lancer un build automatiquement après chaque commit.
 
 ### Middleware et services
 
