@@ -5,7 +5,8 @@ Ici, application simple avec une page html sur un serveur Apache.
 
 L'objectif de cette application est de faire une configuration serveur apache avec Ansible sur différents environnements (Recette 1, Recette 2, etc ...). 
 
-https://raw.github.com/anne-marziale/ansible-server/master/home/anne/projet/ansible-server/images/Capture d’écran 2022-12-21 222645.png
+![Capture d’écran 2022-12-21 222645](https://user-images.githubusercontent.com/85136214/209154722-dda763f9-4b87-4d49-ad25-b4d29c70ba05.png)
+
 
 # Contexte
 Ici, nous allons utiliser 2 machines virtuelles. Une machine control node qui hébergera ansible et Jenkins et une machine managed node.
