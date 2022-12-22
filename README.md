@@ -1,22 +1,25 @@
 # Projet B
 
-Déploiement d'une application sous forme de Pipeline avec Jenkins.
-Ici, application simple avec une page html sur un serveur Apache.
+Déploiement d'Ansible sous forme de Pipeline avec Jenkins.
+Ici, nous avons une application simple c'est à dire une page html qui sera héberger sur un serveur Apache.
 
-L'objectif de cette application est de faire une configuration serveur apache avec Ansible sur différents environnements (Recette 1, Recette 2, etc ...). 
+L'objectif de cette application est d'herberger une page HTML sur différents environnements (Recette 1, Recette 2, etc ...). , grâce à la configuration d'un serveur apache avec Ansible.
 
 ![Capture d’écran 2022-12-21 222645](https://user-images.githubusercontent.com/85136214/209154722-dda763f9-4b87-4d49-ad25-b4d29c70ba05.png)
 
 
 # Contexte
-Ici, nous allons utiliser 2 machines virtuelles. Une machine control node qui hébergera ansible et Jenkins et une machine managed node.
+Ici, nous allons utiliser 2 machines virtuelles. Une machine control node qui hébergera Ansible et Jenkins et une machine managed node sur laquelle les tâches ansible seront exécuter.
 
 ## Coté Ansible ##
 
-Dans un premier temps dépôt d'un fichier HTML simple sur le serveur apache grâce au rôle Déploiement. 
+Dans un premier temps nous allons réaliser le dépôt d'un fichier template HTML dans la configuration d'apache grâce au rôle Déploiement qui éxécutera les tâches du rôle sur le playbook.yml. 
 
-Dans les différentes tâches du rôle déploiement nous pouvons voir la création et le dépot d'un fichier sur les différents environnements. 
-Par la suite j'ai également modifier la configuration de différents fichiers tel que apache.conf (situé dans templates) afin de mettre le fichier html direcetement sur le serveur apache. Le playbook s'éxecute grâce à la commande **"ansible-playbook playbooks/playbook.yml"**.
+Dans les différentes tâches du rôle nous pouvons voir la création et le dépot d'un fichier sur les différents environnements. 
+
+J'ai également modifier la configuration des différents fichiers de configurations d'apache tel que apache.conf (situé dans templates) par exemple, afin de mettre le fichier html direcetement sur le serveur apache. 
+
+Le playbook Ansible s'éxecute grâce à la commande **"ansible-playbook playbooks/playbook.yml"**.
 
 ## Coté Jenkins ##
 
@@ -36,8 +39,7 @@ L'objectif va être de déployer via une Pipeline Jenkins le playbook ansible gr
  - Installer Ansible
  - Réaliser un git Clone.
  - Déployer playbook ansible 
- - Lancer un build automatiquement après chaque commit.
- - Grâce à une pipeline Jenkins.
+ - Lancer un build automatiquement après chaque commit, tout ça grâce à une pipeline Jenkins.
 
 ### Middleware et services
 
